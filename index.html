@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Finance</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__Content">
+        <div class="header__Text">
+          <p class="header__TitleBrand">Control <a class="header__TitleGray"> Finance</a> </p>
+        </div>
+        <button class="buttonPrimary modal__Button">Registrar novo valor</button>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="mainContent">
+        <div class="mainContent__Top">
+          <h2 class="mainContent__Top__Text">Resumo Financeiro</h2>
+          <div class="mainContent__Top__Buttons">
+            <button id="todos" class="outlineButton">Todos</button>
+            <button id="entrada" class="outlineButton">Entradas</button>
+            <button id="saida" class="outlineButton">Saídas</button>
+          </div>
+        </div>
+
+        <div class="mainContent__Middle">
+          <h3 class="mainContent__Middle__Text">Soma dos valores</h3>
+          <p class="mainContent__Middle__Sum">R$ 0,00</p>
+        </div>
+
+        <div class="mainContent__Bottom">
+          <ul class="mainContent__Bottom__list"></ul>
+
+        </div>
+      </section>
+
+      <dialog id="modal__controller">
+       <div id="modal__container">
+         <div class="modal__top">
+          <h1 class="modal__title">Registro de valor</h1>
+          <button id="modal__close">X</button>
+         </div>
+
+         <div class="modal__middle">
+          <p class="modal__text">Digite o valor e em seguida aperte no botão referente ao tipo do valor</p>
+          <a class="modal__text__value__text">Valor</a><input class="modal__insert" type="number" name="valor" placeholder="R$ 00,00" id="modal__input">
+
+         </div>
+
+         <div class="modal__typesOf">
+          <p class="modal__option">Tipo de valor</p>
+          <button class="greylow modal__type__button" id="entrada_button">Entrada</button>
+          <button class="greylow modal__type__button" id="saida_button">Saída</button>
+         </div>
+
+         <div class="modal__bottom">
+          <button class="modalCancelButton">Cancelar</button>
+          <button class="insertValueButton">Inserir Valor</button>
+        </div>
+       </div>
+      </dialog>
+
+    </main>
+    <script type="module" src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/modal.js"></script>
+  </body>
+</html>
